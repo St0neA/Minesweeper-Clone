@@ -1,8 +1,7 @@
 import pygame
 import numpy as np
 import numpy.random as rand
-import matplotlib.pyplot as plt
-
+import os
 
 #controls mines/flags remaining sprites
 def mine_digits(num): #take num and convert into three digits
@@ -214,6 +213,8 @@ height = 16*gamerows + bottom_border + banner_height
 gameDisplay = pygame.display.set_mode((width, height)) #creates display
 pygame.display.set_caption("Minesweeper") #sets title
 
+skin = "XPsprites"
+os.chdir(skin)
 
 clickedmine = pygame.image.load('clickedmine.png').convert_alpha() #load sprites
 minesprite = pygame.image.load('mine.png').convert_alpha() 
